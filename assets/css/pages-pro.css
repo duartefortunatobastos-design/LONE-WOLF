@@ -1,0 +1,327 @@
+/* Páginas profissionais — FAQ, Patrocínio, Media Kit, subpáginas loja */
+
+.faq-section .container-estreito,
+.patrocinio-section .container,
+.media-kit-section .container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.faq-section .container-estreito {
+    max-width: 820px;
+}
+
+/* —— FAQ accordion —— */
+.faq-grupo {
+    margin-bottom: 48px;
+}
+
+.faq-grupo h2 {
+    font-family: var(--lw-font-display);
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--lw-text);
+    margin-bottom: 12px;
+}
+
+.faq-item {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item[open] {
+    border-color: rgba(229, 127, 31, 0.35);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--lw-text);
+    padding: 18px 22px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(229, 127, 31, 0.12);
+    color: var(--lw-line);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+    background: var(--lw-gradient-orange);
+    color: #101010;
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 22px 20px;
+    color: var(--lw-muted);
+    line-height: 1.7;
+    font-size: 0.98rem;
+}
+
+/* —— Patrocínio pacotes —— */
+.patrocinio-pacotes {
+    margin-bottom: 56px;
+}
+
+.patrocinio-pacote {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.patrocinio-pacote:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+.patrocinio-pacote-destaque {
+    border-color: rgba(229, 127, 31, 0.45) !important;
+    box-shadow: 0 18px 40px rgba(229, 127, 31, 0.12);
+    position: relative;
+}
+
+.patrocinio-pacote-destaque::before {
+    content: "Recomendado";
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.patrocinio-lista {
+    margin: 16px 0 0;
+    padding-left: 0;
+    list-style: none;
+    flex: 1;
+}
+
+.patrocinio-lista li {
+    position: relative;
+    padding: 8px 0 8px 22px;
+    color: var(--lw-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.patrocinio-lista li:last-child {
+    border-bottom: none;
+}
+
+.patrocinio-lista li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lw-gradient-orange);
+}
+
+/* —— Media kit downloads —— */
+.media-kit-section .beneficio-card {
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-kit-section .beneficio-card .produto-btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.media-kit-section .cta-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-kit-section .cta-box .btn-principal {
+    margin: 0;
+}
+
+/* —— CTA box (content pages) —— */
+body.lw-enhanced .faq-page .cta-box,
+body.lw-enhanced .patrocinio-page .cta-box,
+body.lw-enhanced .media-kit-page .cta-box {
+    margin-top: 16px;
+}
+
+body.lw-enhanced .faq-page .cta-box p,
+body.lw-enhanced .patrocinio-page .cta-box p,
+body.lw-enhanced .media-kit-page .cta-box p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* —— Produto — subpágina loja —— */
+.produto-topbar {
+    background: var(--lw-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 14px 0;
+}
+
+.produto-topbar .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.produto-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.produto-voltar:hover {
+    color: var(--lw-line);
+}
+
+.produto-voltar i {
+    font-size: 12px;
+}
+
+.pagina-produto .produto-detalhe {
+    padding-top: 40px;
+}
+
+/* —— Hero atleta alinhado —— */
+.hero-atleta {
+    position: relative;
+    min-height: var(--lw-hero-min-h);
+    height: auto;
+    display: flex;
+    align-items: center;
+    background: var(--lw-dark);
+    overflow: hidden;
+}
+
+.hero-atleta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../IMAGENS/logo_lobo.png") no-repeat;
+    background-position: right 10% center;
+    background-size: 430px;
+    opacity: 0.2;
+    z-index: 0;
+    filter: contrast(1.15);
+}
+
+.hero-atleta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 86% 50%, rgba(229, 127, 31, 0.25), transparent 34%),
+        linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.98) 34%, rgba(5, 5, 5, 0.82) 58%, rgba(5, 5, 5, 0.38) 78%, rgba(5, 5, 5, 0.1) 100%);
+    z-index: 1;
+}
+
+.hero-atleta > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-atleta h1 {
+    font-family: var(--lw-font-display);
+    font-size: clamp(42px, 8vw, 84px);
+    line-height: 0.95;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.hero-atleta .hero-frase {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* —— Footer expandido —— */
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 28px;
+}
+
+.footer-links-grid a {
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-links-grid a:hover {
+    color: var(--lw-line);
+}
+
+@media (max-width: 900px) {
+    .patrocinio-pacotes {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+html[lang="en"] .patrocinio-pacote-destaque::before {
+    content: "Recommended";
+}
+
+@media (max-width: 600px) {
+    .patrocinio-pacote-destaque::before {
+        top: 12px;
+        right: 12px;
+        font-size: 9px;
+    }
+}

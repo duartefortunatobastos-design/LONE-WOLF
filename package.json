@@ -1,0 +1,10 @@
+{
+  "name": "pap-lonewolf",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "start": "npm run dev",
+    "lint:php": "node scripts/lint-php.mjs"
+  }
+}

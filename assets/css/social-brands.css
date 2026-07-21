@@ -1,0 +1,129 @@
+/* Icones com cores oficiais das aplicacoes */
+
+.social-icon,
+.footer-social-wrap a,
+.redes a,
+.social-btn {
+    --social-color: #747474;
+}
+
+.social-icon i,
+.footer-social-wrap a i,
+.redes a i,
+.social-btn i {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Instagram */
+.social-instagram i,
+a.social-instagram > i,
+.social-btn.social-instagram i {
+    background: linear-gradient(45deg, #f58529 0%, #dd2a7b 50%, #8134af 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Facebook */
+.social-facebook i,
+a.social-facebook > i,
+.social-btn.social-facebook i {
+    color: #1877f2 !important;
+    -webkit-text-fill-color: #1877f2;
+    background: none;
+}
+
+/* WhatsApp */
+.social-whatsapp i,
+a.social-whatsapp > i,
+.social-btn.social-whatsapp i {
+    color: #25d366 !important;
+    -webkit-text-fill-color: #25d366;
+    background: none;
+}
+
+/* Google Maps / localizacao */
+.social-maps i,
+a.social-maps > i,
+.social-btn.social-maps i {
+    color: #ea4335 !important;
+    -webkit-text-fill-color: #ea4335;
+    background: none;
+}
+
+/* Telefone (estilo iOS) */
+.social-phone i,
+a.social-phone > i,
+.social-btn.social-phone i {
+    color: #34c759 !important;
+    -webkit-text-fill-color: #34c759;
+    background: none;
+}
+
+/* Website */
+.social-website i,
+a.social-website > i,
+.social-btn.social-website i {
+    color: #007aff !important;
+    -webkit-text-fill-color: #007aff;
+    background: none;
+}
+
+.footer-social-wrap a,
+.redes a,
+.social-btn {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.footer-social-wrap a:hover,
+.redes a:hover,
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.footer-social-wrap a:hover i,
+.redes a:hover i,
+.social-btn:hover i {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+}
+
+.footer-social-wrap a.social-instagram:hover,
+.redes a.social-instagram:hover,
+.social-btn.social-instagram:hover {
+    border-color: rgba(221, 42, 123, 0.35) !important;
+}
+
+.footer-social-wrap a.social-facebook:hover,
+.redes a.social-facebook:hover,
+.social-btn.social-facebook:hover {
+    border-color: rgba(24, 119, 242, 0.35) !important;
+}
+
+.footer-social-wrap a.social-whatsapp:hover,
+.redes a.social-whatsapp:hover,
+.social-btn.social-whatsapp:hover {
+    border-color: rgba(37, 211, 102, 0.35) !important;
+}
+
+.footer-social-wrap a.social-maps:hover,
+.redes a.social-maps:hover,
+.social-btn.social-maps:hover {
+    border-color: rgba(234, 67, 53, 0.35) !important;
+}
+
+.footer-social-wrap a.social-phone:hover,
+.redes a.social-phone:hover,
+.social-btn.social-phone:hover {
+    border-color: rgba(52, 199, 89, 0.35) !important;
+}
+
+.footer-social-wrap a.social-website:hover,
+.redes a.social-website:hover,
+.social-btn.social-website:hover {
+    border-color: rgba(0, 122, 255, 0.35) !important;
+}

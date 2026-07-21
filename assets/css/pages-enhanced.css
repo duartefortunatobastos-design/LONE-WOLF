@@ -1,0 +1,720 @@
+/* ═══════════════════════════════════════════════════════════════
+   Lone Wolf — Páginas públicas melhoradas
+   (index, admin e mensagens ficam de fora)
+   Regra de ouro: nunca interferir com o header fixo.
+   ═══════════════════════════════════════════════════════════════ */
+
+.lw-header {
+    z-index: 100000 !important;
+}
+
+body.lw-enhanced:not(.auth-page) {
+    background:
+        radial-gradient(circle at 0% 0%, rgba(229, 127, 31, 0.05), transparent 36%),
+        radial-gradient(circle at 100% 12%, rgba(229, 127, 31, 0.04), transparent 32%),
+        var(--lw-bg);
+}
+
+/* ── Heróis ── */
+body.lw-enhanced .hero-atleta,
+body.lw-enhanced .hero-historia,
+body.lw-enhanced .hero-galeria,
+body.lw-enhanced .hero-rotina,
+body.lw-enhanced .hero-contacto,
+body.lw-enhanced .hero-loja,
+body.lw-enhanced .hero-legal,
+body.lw-enhanced .hero-page,
+body.lw-enhanced .provas-hero,
+body.lw-enhanced .patrocinadores-page .hero,
+body.lw-enhanced .hero-carrinho,
+body.lw-enhanced .hero-checkout {
+    min-height: clamp(320px, 44vh, 460px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+body.lw-enhanced .hero-carrinho,
+body.lw-enhanced .hero-checkout {
+    min-height: clamp(280px, 38vh, 380px);
+}
+
+body.lw-enhanced .hero-conteudo {
+    padding: clamp(36px, 5vw, 56px) clamp(20px, 4vw, 32px);
+}
+
+body.lw-enhanced .hero-mini,
+body.lw-enhanced .hero-kicker,
+body.lw-enhanced .hero-carrinho .kicker,
+body.lw-enhanced .hero-checkout .kicker {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 16px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(229, 127, 31, 0.32);
+    background: rgba(229, 127, 31, 0.1);
+    color: #ffb86a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    backdrop-filter: blur(6px);
+}
+
+body.lw-enhanced .hero-atleta h1,
+body.lw-enhanced .hero-historia h1,
+body.lw-enhanced .hero-galeria h1,
+body.lw-enhanced .hero-rotina h1,
+body.lw-enhanced .hero-contacto h1,
+body.lw-enhanced .hero-loja h1,
+body.lw-enhanced .hero-legal h1,
+body.lw-enhanced .provas-hero h1,
+body.lw-enhanced .patrocinadores-page .hero h1,
+body.lw-enhanced .hero-carrinho h1,
+body.lw-enhanced .hero-checkout h1 {
+    font-size: clamp(40px, 7.5vw, 76px);
+    letter-spacing: 3px;
+    text-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+body.lw-enhanced .hero-frase,
+body.lw-enhanced .pagina-loja .hero-texto {
+    font-size: clamp(17px, 2.2vw, 21px);
+    line-height: 1.65;
+    max-width: 560px;
+}
+
+/* ── Secções ── */
+body.lw-enhanced .provas-wrapper,
+body.lw-enhanced .atleta-page,
+body.lw-enhanced .historia-page,
+body.lw-enhanced .galeria-page .container,
+body.lw-enhanced .rotina-page .container,
+body.lw-enhanced .secao-contactos,
+body.lw-enhanced .secao-legal,
+body.lw-enhanced .pagina-loja section,
+body.lw-enhanced .pagina-carrinho .conteudo-carrinho,
+body.lw-enhanced .pagina-checkout .conteudo-checkout,
+body.lw-enhanced .patrocinadores-page .section,
+body.lw-enhanced .parceiro-page .secao-branca,
+body.lw-enhanced .parceiro-page .secao-cinza {
+    padding-top: clamp(64px, 8vw, 96px);
+    padding-bottom: clamp(72px, 9vw, 104px);
+}
+
+body.lw-enhanced .titulo-secao h2,
+body.lw-enhanced .secao-titulo h3,
+body.lw-enhanced .titulo-plano h2,
+body.lw-enhanced .patrocinadores-page .title h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+body.lw-enhanced .linha-laranja,
+body.lw-enhanced .secao-linha,
+body.lw-enhanced .patrocinadores-page .line {
+    width: 60px;
+    height: 4px;
+    background: var(--lw-gradient-orange);
+    box-shadow: 0 0 16px rgba(229, 127, 31, 0.35);
+}
+
+/* ── Cartões de intro ── */
+body.lw-enhanced .intro-provas,
+body.lw-enhanced .intro-atleta,
+body.lw-enhanced .intro-historia,
+body.lw-enhanced .intro-rotina {
+    grid-template-columns: minmax(260px, 340px) 1fr;
+    gap: clamp(28px, 4vw, 48px);
+    align-items: center;
+    padding: clamp(28px, 4vw, 40px);
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    box-shadow: var(--lw-shadow-card);
+    position: relative;
+    overflow: hidden;
+}
+
+body.lw-enhanced .intro-provas::before,
+body.lw-enhanced .intro-atleta::before,
+body.lw-enhanced .intro-historia::before,
+body.lw-enhanced .intro-rotina::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--lw-gradient-orange);
+}
+
+body.lw-enhanced .intro-imagem {
+    max-width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 14px;
+}
+
+body.lw-enhanced .intro-imagem::before {
+    inset: -10px;
+    border-radius: 16px;
+    border-color: rgba(229, 127, 31, 0.45);
+}
+
+body.lw-enhanced .intro-imagem img {
+    border-radius: 12px;
+    transition: transform 0.45s ease;
+}
+
+body.lw-enhanced .intro-imagem:hover img {
+    transform: scale(1.03);
+}
+
+body.lw-enhanced .intro-texto h2 {
+    font-size: clamp(26px, 3.5vw, 34px);
+    font-weight: 800;
+}
+
+/* ── Stats ── */
+body.lw-enhanced .content-page .stats-grid {
+    max-width: none;
+    gap: 14px;
+}
+
+body.lw-enhanced .content-page .stat-card {
+    background: var(--lw-bg-card);
+    border-radius: 16px;
+    padding: 20px 16px;
+    border: 1px solid var(--lw-border);
+    box-shadow: var(--lw-shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+body.lw-enhanced .content-page .stat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(229, 127, 31, 0.35);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+body.lw-enhanced .content-page .stat-valor {
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 800;
+    color: var(--lw-line-strong);
+}
+
+body.lw-enhanced .content-page .stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: var(--lw-muted);
+}
+
+/* ── Descrição atleta ── */
+body.lw-enhanced .descricao-atleta {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    padding: clamp(32px, 4vw, 44px);
+    box-shadow: var(--lw-shadow-card);
+    text-align: center;
+}
+
+body.lw-enhanced .descricao-atleta p {
+    font-size: clamp(17px, 2vw, 20px);
+    line-height: 1.75;
+}
+
+/* ── Competições / tabelas ── */
+body.lw-enhanced .provas-bloco {
+    max-width: 860px;
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    padding: 0;
+    overflow: hidden;
+    box-shadow: var(--lw-shadow-card);
+}
+
+body.lw-enhanced .provas-titulo {
+    padding: 20px 24px;
+    margin-bottom: 0;
+    background: linear-gradient(90deg, #0a0c12, #151820);
+}
+
+body.lw-enhanced .provas-titulo h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+body.lw-enhanced .provas-titulo .linha {
+    background: var(--lw-line-strong);
+    width: 32px;
+    height: 3px;
+    margin: 0;
+    box-shadow: none;
+}
+
+body.lw-enhanced .provas-tabela thead th {
+    background: #f4f5f8;
+    color: var(--lw-muted);
+    font-size: 11px;
+    border-bottom: 2px solid rgba(229, 127, 31, 0.2);
+}
+
+body.lw-enhanced .provas-tabela tbody tr:hover {
+    background: rgba(229, 127, 31, 0.05);
+}
+
+body.lw-enhanced .provas-tabela .tempo {
+    color: var(--lw-line-strong);
+    font-weight: 700;
+}
+
+/* ── Galeria ── */
+body.lw-enhanced .foto-destaque,
+body.lw-enhanced .foto-card,
+body.lw-enhanced .galeria-card {
+    border-radius: var(--lw-radius-xl);
+    border: 1px solid var(--lw-border);
+    box-shadow: var(--lw-shadow-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.lw-enhanced .galeria-card:hover,
+body.lw-enhanced .foto-destaque:hover,
+body.lw-enhanced .foto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+body.lw-enhanced .galeria-page .tag {
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    font-family: var(--lw-font-display);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 14px rgba(229, 127, 31, 0.35);
+}
+
+body.lw-enhanced .frase-final {
+    background: linear-gradient(135deg, #0a0c12 0%, #151820 100%);
+    border: 1px solid rgba(229, 127, 31, 0.2);
+    border-radius: var(--lw-radius-xl);
+    padding: clamp(40px, 5vw, 56px) 32px;
+    box-shadow: var(--lw-shadow-dark);
+}
+
+body.lw-enhanced .frase-final h2 {
+    color: #fff;
+    font-size: clamp(24px, 3.5vw, 34px);
+    margin-bottom: 12px;
+}
+
+body.lw-enhanced .frase-final p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+/* ── Timeline ── */
+body.lw-enhanced .timeline::before {
+    width: 3px;
+    background: linear-gradient(180deg, var(--lw-line), rgba(229, 127, 31, 0.15));
+}
+
+body.lw-enhanced .timeline-item {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: 16px;
+    padding: 22px 26px;
+    box-shadow: var(--lw-shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.lw-enhanced .timeline-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+body.lw-enhanced .timeline-item::before {
+    width: 12px;
+    height: 12px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px rgba(229, 127, 31, 0.4);
+}
+
+body.lw-enhanced .timeline-ano {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* ── Treinos ── */
+body.lw-enhanced .item-plano {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    box-shadow: var(--lw-shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+body.lw-enhanced .item-plano:hover {
+    transform: translateX(4px);
+    border-color: rgba(229, 127, 31, 0.3);
+}
+
+body.lw-enhanced .info-plano .dia {
+    font-family: var(--lw-font-display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--lw-line);
+}
+
+body.lw-enhanced .etiqueta {
+    background: rgba(229, 127, 31, 0.12);
+    border: 1px solid rgba(229, 127, 31, 0.25);
+    color: var(--lw-line);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+body.lw-enhanced .destaque-treino,
+body.lw-enhanced .nota-plano {
+    background: linear-gradient(135deg, #0a0c12, #151820);
+    border: 1px solid rgba(229, 127, 31, 0.18);
+    border-left: 4px solid var(--lw-line);
+    border-radius: 16px;
+    color: #fff;
+    padding: 28px;
+    box-shadow: var(--lw-shadow-dark);
+}
+
+body.lw-enhanced .destaque-treino p,
+body.lw-enhanced .nota-plano p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+body.lw-enhanced .nota-plano h3 {
+    color: #fff;
+}
+
+/* ── Contacto ── */
+body.lw-enhanced .formulario-contacto {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    padding: clamp(28px, 4vw, 36px);
+    box-shadow: var(--lw-shadow-card);
+}
+
+body.lw-enhanced .formulario-contacto input,
+body.lw-enhanced .formulario-contacto textarea {
+    border-radius: 12px;
+    background: var(--lw-bg-soft);
+    border-color: var(--lw-border);
+}
+
+body.lw-enhanced .formulario-contacto input:focus,
+body.lw-enhanced .formulario-contacto textarea:focus {
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(229, 127, 31, 0.12);
+}
+
+body.lw-enhanced .botao-enviar {
+    border-radius: 999px;
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 28px rgba(229, 127, 31, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.lw-enhanced .botao-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(229, 127, 31, 0.34);
+}
+
+body.lw-enhanced .info-bloco {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--lw-shadow-soft);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+body.lw-enhanced .info-bloco:hover {
+    transform: translateY(-2px);
+    border-color: rgba(229, 127, 31, 0.28);
+}
+
+body.lw-enhanced .info-bloco h3 {
+    color: var(--lw-line);
+    font-family: var(--lw-font-display);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ── Parceiros ── */
+body.lw-enhanced .patrocinadores-page .card {
+    border-radius: var(--lw-radius-xl);
+    box-shadow: var(--lw-shadow-card);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+body.lw-enhanced .patrocinadores-page .card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+body.lw-enhanced .patrocinadores-page .btn {
+    border-radius: 999px;
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    font-weight: 800;
+    box-shadow: 0 8px 22px rgba(229, 127, 31, 0.3);
+}
+
+body.lw-enhanced .parceiro-page .bloco-centro {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    padding: clamp(32px, 4vw, 44px);
+    box-shadow: var(--lw-shadow-card);
+}
+
+body.lw-enhanced .parceiro-page .secao-cinza .bloco-centro {
+    background: linear-gradient(135deg, #0a0c12, #151820);
+    border-color: rgba(229, 127, 31, 0.18);
+    color: #fff;
+}
+
+body.lw-enhanced .parceiro-page .secao-cinza h2,
+body.lw-enhanced .parceiro-page .secao-cinza .subtitulo {
+    color: #fff;
+}
+
+body.lw-enhanced .parceiro-page .lista-destaques li {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+}
+
+/* ── Loja ── */
+body.lw-enhanced .beneficio-card,
+body.lw-enhanced .produto-card {
+    border-radius: var(--lw-radius-xl);
+    box-shadow: var(--lw-shadow-soft);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+body.lw-enhanced .beneficio-card:hover,
+body.lw-enhanced .produto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--lw-shadow-hover);
+    border-color: rgba(229, 127, 31, 0.28);
+}
+
+body.lw-enhanced .produto-badge {
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    font-weight: 800;
+    border-radius: 999px;
+}
+
+body.lw-enhanced .produto-btn,
+body.lw-enhanced .cta-loja .btn-principal {
+    border-radius: 999px;
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    font-weight: 800;
+    box-shadow: 0 8px 22px rgba(229, 127, 31, 0.26);
+}
+
+body.lw-enhanced .cta-box {
+    background: linear-gradient(135deg, #0a0c12, #151820);
+    border: 1px solid rgba(229, 127, 31, 0.2);
+    border-radius: var(--lw-radius-xl);
+    color: #fff;
+    box-shadow: var(--lw-shadow-dark);
+}
+
+body.lw-enhanced .cta-box h2 {
+    color: #fff;
+}
+
+/* ── Carrinho / Checkout ── */
+body.lw-enhanced .hero-carrinho,
+body.lw-enhanced .hero-checkout {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    padding: 0;
+    min-height: clamp(280px, 38vh, 380px);
+    display: flex;
+    align-items: center;
+    background: var(--lw-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+body.lw-enhanced .hero-carrinho::before,
+body.lw-enhanced .hero-checkout::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../IMAGENS/logo_lobo.png") no-repeat right 8% center / min(400px, 50vw);
+    opacity: 0.16;
+    z-index: 0;
+}
+
+body.lw-enhanced .hero-carrinho::after,
+body.lw-enhanced .hero-checkout::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 86% 50%, rgba(229, 127, 31, 0.22), transparent 34%),
+        linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.95) 40%, rgba(5, 5, 5, 0.5) 100%);
+    z-index: 1;
+}
+
+body.lw-enhanced .hero-carrinho .hero-conteudo,
+body.lw-enhanced .hero-checkout .hero-conteudo {
+    position: relative;
+    z-index: 2;
+}
+
+body.lw-enhanced .hero-carrinho .hero-frase,
+body.lw-enhanced .hero-checkout .hero-frase {
+    color: rgba(255, 255, 255, 0.78);
+    margin-top: 16px;
+}
+
+body.lw-enhanced .pagina-carrinho .carrinho-box,
+body.lw-enhanced .pagina-checkout .checkout-grid .box {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    box-shadow: var(--lw-shadow-card);
+    overflow: hidden;
+}
+
+body.lw-enhanced .pagina-carrinho .item {
+    border-bottom: 1px solid var(--lw-border);
+    padding: 22px 24px;
+    transition: background 0.2s ease;
+}
+
+body.lw-enhanced .pagina-carrinho .item:hover {
+    background: rgba(229, 127, 31, 0.04);
+}
+
+/* ── Legal ── */
+body.lw-enhanced .conteudo-legal {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    padding: clamp(36px, 5vw, 52px);
+    box-shadow: var(--lw-shadow-card);
+}
+
+body.lw-enhanced .badge-legal {
+    background: rgba(229, 127, 31, 0.12);
+    border: 1px solid rgba(229, 127, 31, 0.28);
+    color: var(--lw-line);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+body.lw-enhanced .conteudo-legal h2 {
+    font-family: var(--lw-font-display);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--lw-border);
+}
+
+/* ── Auth ── */
+body.lw-enhanced.auth-page .auth-hero {
+    min-height: 260px;
+    background: linear-gradient(135deg, #06080c 0%, #121820 60%, #1a2030 100%);
+}
+
+body.lw-enhanced .auth-card {
+    border-radius: var(--lw-radius-xl);
+    border-color: var(--lw-border);
+    box-shadow: var(--lw-shadow-card);
+    padding: 36px 32px;
+}
+
+body.lw-enhanced .auth-card .btn-auth:not(.alt) {
+    border-radius: 999px;
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    font-weight: 800;
+    box-shadow: 0 10px 26px rgba(229, 127, 31, 0.26);
+}
+
+body.lw-enhanced .auth-card .btn-auth.alt {
+    border-radius: 999px;
+}
+
+/* ── Animações reveal ── */
+body.lw-enhanced .reveal-page {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body.lw-enhanced .reveal-page.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    body.lw-enhanced .intro-provas,
+    body.lw-enhanced .intro-atleta,
+    body.lw-enhanced .intro-historia,
+    body.lw-enhanced .intro-rotina {
+        grid-template-columns: 1fr;
+    }
+
+    body.lw-enhanced .intro-imagem {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    body.lw-enhanced .item-plano {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    body.lw-enhanced .content-page .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,521 @@
+/* —— Premium theme layer (aligned with header.css) —— */
+
+/* Shared surfaces */
+.lw-surface {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-lg);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+/* —— Heroes —— */
+.hero-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 70% 40%, rgba(229, 127, 31, 0.18), transparent 42%),
+        linear-gradient(180deg, rgba(6, 8, 12, 0.15) 0%, rgba(6, 8, 12, 0.72) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-home::after {
+    background: linear-gradient(to bottom, rgba(6, 8, 12, 0.05), rgba(6, 8, 12, 0.55));
+}
+
+.hero-page::before,
+.hero-admin::before,
+.hero-contacto::before,
+.hero-legal::before,
+.hero-atleta::before,
+.provas-hero::before,
+.hero-galeria::before,
+.hero-historia::before,
+.hero-rotina::before,
+.hero-loja::before,
+.patrocinadores-page .hero::before {
+    opacity: 0.14;
+}
+
+.hero-page::after,
+.hero-admin::after,
+.hero-contacto::after,
+.hero-legal::after,
+.hero-atleta::after,
+.provas-hero::after,
+.hero-galeria::after,
+.hero-historia::after,
+.hero-rotina::after,
+.hero-contacto::after,
+.hero-loja::after,
+.patrocinadores-page .hero::after {
+    background:
+        radial-gradient(circle at 82% 48%, rgba(229, 127, 31, 0.2), transparent 36%),
+        linear-gradient(90deg, rgba(6, 8, 12, 0.98) 0%, rgba(6, 8, 12, 0.88) 42%, rgba(6, 8, 12, 0.45) 100%);
+}
+
+.hero-mini {
+    letter-spacing: 5px;
+    color: var(--lw-line-strong);
+}
+
+/* —— Section titles —— */
+.titulo-secao h2,
+.bloco-titulo h2,
+.pagina-loja .secao-titulo h2 {
+    letter-spacing: 1.2px;
+}
+
+.titulo-secao p,
+.bloco-titulo p {
+    font-size: 17px;
+}
+
+.linha-laranja,
+.linha,
+.pagina-loja .secao-titulo::after {
+    width: 56px;
+    height: 3px;
+    background: var(--lw-gradient-orange);
+    box-shadow: 0 0 18px rgba(229, 127, 31, 0.35);
+}
+
+.hero-home h1 {
+    text-shadow: 0 10px 42px rgba(0, 0, 0, 0.45);
+}
+
+.hero-home p {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.stats-strip {
+    position: relative;
+    background: var(--lw-gradient-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 32px 0;
+}
+
+.stats-strip::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(229, 127, 31, 0.5) 50%,
+        transparent
+    );
+    opacity: 0.7;
+}
+
+.stat-item {
+    padding: 8px 12px;
+    border-radius: var(--lw-radius);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.stat-label {
+    color: var(--lw-muted-on-dark);
+    letter-spacing: 0.8px;
+}
+
+.home-explorar-card {
+    border-radius: var(--lw-radius-xl);
+    border: 1px solid var(--lw-border);
+    box-shadow: var(--lw-shadow-card);
+}
+
+.home-explorar-card:hover {
+    border-color: rgba(229, 127, 31, 0.32);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+.home-explorar-icone {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(229, 127, 31, 0.1);
+    border: 1px solid rgba(229, 127, 31, 0.18);
+}
+
+.secao-resultados {
+    position: relative;
+    background: var(--lw-gradient-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.secao-resultados .titulo-secao h2 {
+    color: var(--lw-text-on-dark);
+}
+
+.secao-resultados .titulo-secao p {
+    color: var(--lw-muted-on-dark);
+}
+
+.secao-resultados .resultado-card {
+    background: var(--lw-glass-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--lw-shadow-dark);
+}
+
+.secao-resultados .resultado-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(229, 127, 31, 0.35);
+}
+
+.secao-resultados .resultado-topo {
+    color: var(--lw-muted-on-dark);
+}
+
+.secao-resultados .resultado-prova {
+    color: var(--lw-text-on-dark);
+}
+
+.secao-resultados .resultado-tempo {
+    color: var(--lw-line-strong);
+}
+
+.link-resultados a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(229, 127, 31, 0.12);
+    border: 1px solid rgba(229, 127, 31, 0.28);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    transition: var(--lw-transition);
+}
+
+.link-resultados a:hover {
+    text-decoration: none;
+    background: rgba(229, 127, 31, 0.2);
+    transform: translateY(-2px);
+}
+
+/* —— Content pages —— */
+.provas-page,
+.galeria-page,
+.atleta-page,
+.historia-page,
+.rotina-page,
+.secao-contactos {
+    background: transparent;
+}
+
+.provas-bloco,
+.descricao-atleta,
+.info-bloco,
+.provas-tabela-wrap,
+.galeria-card,
+.foto-card,
+.foto-destaque,
+.item-plano,
+.admin-page .painel-contas,
+.painel-mensagens,
+.auth-card {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-lg);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+.provas-bloco,
+.descricao-atleta,
+.info-bloco {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.info-bloco:hover,
+.galeria-card:hover,
+.foto-card:hover,
+.foto-destaque:hover {
+    transform: translateY(-3px);
+    border-color: rgba(229, 127, 31, 0.22);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+.info-bloco h3 {
+    font-family: var(--lw-font-display);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--lw-line);
+}
+
+.content-page .stat-card {
+    border-radius: var(--lw-radius-lg);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+.intro-imagem::before {
+    border-radius: 14px;
+    border-color: rgba(229, 127, 31, 0.45);
+}
+
+.intro-imagem img {
+    border-radius: 12px;
+}
+
+/* —— Forms —— */
+.formulario-contacto input,
+.formulario-contacto textarea,
+.auth-card input,
+.pagina-checkout .campo input,
+.pagina-checkout .campo textarea,
+.pagina-checkout .campo select {
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius);
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus,
+.auth-card input:focus {
+    outline: none;
+    border-color: rgba(229, 127, 31, 0.55);
+    box-shadow: 0 0 0 4px rgba(229, 127, 31, 0.12);
+}
+
+.botao-enviar {
+    border-radius: 999px;
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    box-shadow: 0 12px 28px rgba(229, 127, 31, 0.22);
+    letter-spacing: 0.8px;
+}
+
+.botao-enviar:hover {
+    filter: brightness(1.04);
+    transform: translateY(-2px);
+}
+
+/* —— Shop —— */
+.pagina-loja,
+.pagina-carrinho,
+.pagina-checkout {
+    background: transparent;
+}
+
+.beneficio-card,
+.produto-card,
+.cta-box,
+.pagina-carrinho .item,
+.pagina-checkout .box {
+    border-radius: var(--lw-radius-lg);
+    border: 1px solid var(--lw-border);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+.beneficio-card:hover,
+.produto-card:hover {
+    border-color: rgba(229, 127, 31, 0.28);
+    box-shadow: var(--lw-shadow-hover);
+}
+
+.produto-btn,
+.cta-loja a,
+.pagina-carrinho .btn-principal,
+.pagina-checkout .btn-principal {
+    border-radius: 999px;
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    box-shadow: 0 10px 24px rgba(229, 127, 31, 0.22);
+}
+
+/* —— Auth —— */
+body.auth-page {
+    background:
+        radial-gradient(circle at 20% 0%, rgba(229, 127, 31, 0.08), transparent 30%),
+        var(--lw-bg-soft);
+}
+
+.auth-hero {
+    position: relative;
+    background: var(--lw-gradient-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.auth-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(229, 127, 31, 0.55), transparent);
+}
+
+.auth-shell {
+    background: transparent;
+}
+
+.auth-card {
+    border-radius: var(--lw-radius-xl);
+    padding: 36px 32px;
+    box-shadow: var(--lw-shadow-card);
+}
+
+.auth-card .btn-auth {
+    border-radius: 999px;
+    letter-spacing: 1px;
+}
+
+.auth-card .btn-auth:not(.alt) {
+    background: #101318;
+}
+
+.auth-card .btn-auth.alt {
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    box-shadow: 0 10px 24px rgba(229, 127, 31, 0.22);
+}
+
+/* —— Admin & chat —— */
+.admin-page,
+.responder-page,
+.chat-page {
+    background: transparent;
+}
+
+.admin-page .stat-card,
+.painel-contas,
+.chat-shell {
+    border-radius: var(--lw-radius-xl);
+    box-shadow: var(--lw-shadow-card);
+}
+
+.chat-shell {
+    border: 1px solid var(--lw-border);
+    overflow: hidden;
+}
+
+.chat-sidebar {
+    background: linear-gradient(180deg, #0a0c12, #06080c);
+}
+
+.chat-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* —— Legal —— */
+.secao-legal .container-legal,
+.conteudo-legal {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-xl);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+/* —— Footer —— */
+.site-footer {
+    position: relative;
+    background: linear-gradient(180deg, #080a0f 0%, #05070b 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: 0;
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(229, 127, 31, 0.45), transparent);
+}
+
+.site-footer .footer-social-wrap a {
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.site-footer .footer-social-wrap a:hover {
+    border-color: rgba(229, 127, 31, 0.35);
+    background: rgba(229, 127, 31, 0.1);
+}
+
+/* —— Sponsors —— */
+.parceiro-page .bloco-centro,
+.lista-destaques li {
+    background: var(--lw-bg-card);
+    border: 1px solid var(--lw-border);
+    border-radius: var(--lw-radius-lg);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+/* —— Alerts —— */
+.alerta {
+    border-radius: var(--lw-radius);
+    font-size: 15px;
+}
+
+.alerta.sucesso {
+    background: rgba(31, 122, 63, 0.1);
+    border-color: rgba(31, 122, 63, 0.25);
+}
+
+.alerta.erro {
+    background: rgba(199, 0, 0, 0.08);
+    border-color: rgba(199, 0, 0, 0.22);
+}
+
+/* —— Cookie banner —— */
+.cookie-banner {
+    background: rgba(6, 8, 12, 0.96);
+    backdrop-filter: blur(14px);
+}
+
+.cookie-btn {
+    border-radius: 999px;
+}
+
+.cookie-btn.aceitar {
+    background: var(--lw-gradient-orange);
+    color: #101010;
+    border: none;
+    box-shadow: 0 8px 20px rgba(229, 127, 31, 0.25);
+}
+
+/* —— Provas table —— */
+.provas-tabela-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--lw-border);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+.provas-tabela tbody tr:hover {
+    background: rgba(229, 127, 31, 0.06);
+}
+
+/* —— Timeline —— */
+.timeline-item {
+    border-radius: var(--lw-radius-lg);
+    box-shadow: var(--lw-shadow-soft);
+}
+
+/* —— Responsive spacing —— */
+@media (max-width: 768px) {
+    .secao,
+    .home-explorar,
+    .secao-contactos,
+    .atleta-page,
+    .historia-page,
+    .provas-wrapper {
+        padding-top: 56px;
+        padding-bottom: 64px;
+    }
+}

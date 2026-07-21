@@ -1,0 +1,167 @@
+body.auth-page {
+    padding-top: 0;
+    background: #ffffff;
+}
+
+.auth-hero {
+    width: 100%;
+    min-height: 240px;
+    background: linear-gradient(135deg, #050505 0%, #111820 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.auth-hero .acesso {
+    font-family: var(--lw-font-display);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    color: var(--lw-line);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.auth-hero h1 {
+    font-family: var(--lw-font-display);
+    font-size: clamp(36px, 6vw, 48px);
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.auth-shell {
+    width: 100%;
+    min-height: calc(100vh - 240px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 70px 20px 90px;
+    background: #ffffff;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 14px;
+    padding: 32px 28px;
+    box-shadow: var(--lw-shadow);
+}
+
+.auth-card label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 8px;
+}
+
+.auth-card input:not([type="checkbox"]) {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 0 14px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    font-family: var(--lw-font-body);
+    color: #111;
+    background: #fff;
+    outline: none;
+    transition: var(--lw-transition);
+}
+
+.auth-card input:not([type="checkbox"]):focus {
+    border-color: var(--lw-line);
+    box-shadow: 0 0 0 3px rgba(229, 127, 31, 0.12);
+}
+
+.auth-politicas {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 4px 0 22px;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+}
+
+.auth-politicas input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0;
+    flex-shrink: 0;
+    accent-color: var(--lw-line);
+    cursor: pointer;
+}
+
+.auth-politicas a {
+    color: var(--lw-line);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.auth-card .btn-auth {
+    width: 100%;
+    min-height: 42px;
+    border: none;
+    border-radius: 8px;
+    background: #141414;
+    color: #ffffff;
+    font-family: var(--lw-font-body);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--lw-transition);
+}
+
+.auth-card .btn-auth:hover {
+    background: #000000;
+}
+
+.auth-card .btn-auth.alt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lw-line);
+    text-decoration: none;
+}
+
+.auth-card .btn-auth.alt:hover {
+    background: var(--lw-line-hover);
+}
+
+.auth-footer {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.auth-footer p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.auth-back {
+    display: inline-flex;
+    margin-top: 18px;
+    color: var(--lw-muted);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-back:hover {
+    color: var(--lw-line);
+}
