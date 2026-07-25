@@ -11,6 +11,7 @@ function render_galeria_trigger(array $item, string $classExtra = "galeria-card"
     $loading = $eager ? "eager" : "lazy";
     $fetchPriority = $eager ? ' fetchpriority="high"' : "";
     $webp = $item["imagem_webp"] ?? "";
+    $tagClass = ($item["id"] ?? "") === "competicao-porto" ? "tag tag--sem-icone" : "tag";
     ?>
     <button
         type="button"
@@ -19,7 +20,7 @@ function render_galeria_trigger(array $item, string $classExtra = "galeria-card"
         data-title="<?= $titulo ?>"
         data-desc="<?= $descricao ?>"
     >
-        <span class="tag" data-i18n="tag_<?= $id ?>"><?= $tag ?></span>
+        <span class="<?= $tagClass ?>" data-i18n="tag_<?= $id ?>"><?= $tag ?></span>
         <?php if ($webp !== ""): ?>
             <picture class="galeria-picture">
                 <source type="image/webp" srcset="<?= htmlspecialchars($webp, ENT_QUOTES, "UTF-8") ?>">

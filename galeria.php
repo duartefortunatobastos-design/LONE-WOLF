@@ -72,7 +72,7 @@ require_once "includes/head.php";
     <div class="galeria-fixed-cta-inner">
         <p class="galeria-fixed-cta-text" data-i18n="fixedCtaText">Interessado em parcerias ou colaboração?</p>
         <div class="galeria-fixed-cta-actions">
-            <a href="patrocinio.php" class="galeria-fixed-cta-btn galeria-fixed-cta-btn--ghost" data-i18n="fixedCtaPartners">Parcerias</a>
+            <a href="patrocinadores.php" class="galeria-fixed-cta-btn galeria-fixed-cta-btn--ghost" data-i18n="fixedCtaPartners">Parcerias</a>
             <a href="contatos.php" class="galeria-fixed-cta-btn" data-i18n="fixedCtaContact">Contacto</a>
         </div>
     </div>
@@ -119,13 +119,24 @@ window.pageTranslations = {
         fixedCtaPartners: "Parcerias",
         fixedCtaContact: "Contacto",
         galeriaVazia: "Nenhuma imagem nesta categoria.",
-        tag_competicao: "Maratona Madrid", tag_competicao-porto: "Maratona Porto", tag_competicao-ispcsi: "Corrida ISPCSI",
-        tag_treino-fatima: "Corrida até Fátima", tag_equipamento: "Equipamento", tag_treino-foco: "Foco",
-        title_competicao: "Espírito Lone Wolf", title_competicao-porto: "Competição", title_competicao-ispcsi: "Ritmo de Prova",
-        title_treino-fatima: "Resistência", title_equipamento: "Lone Wolf", title_treino-foco: "Mente no Alvo",
-        desc_competicao: "Foco, garra e consistência em cada desafio.", desc_competicao-porto: "Onde a mente e o corpo são postos à prova.",
-        desc_competicao-ispcsi: "Cada quilómetro conta na construção do resultado.", desc_treino-fatima: "Superar distâncias com foco e determinação.",
-        desc_equipamento: "Identidade, disciplina e mentalidade competitiva.", desc_treino-foco: "Foco total. Nada tira do caminho."
+        "tag_competicao": "Maratona Madrid",
+        "tag_competicao-porto": "Maratona Porto",
+        "tag_competicao-ispcsi": "Corrida ISPCSI",
+        "tag_treino-fatima": "Corrida até Fátima",
+        "tag_equipamento": "Equipamento",
+        "tag_treino-foco": "Foco",
+        "title_competicao": "Espírito Lone Wolf",
+        "title_competicao-porto": "Competição",
+        "title_competicao-ispcsi": "Ritmo de Prova",
+        "title_treino-fatima": "Resistência",
+        "title_equipamento": "Lone Wolf",
+        "title_treino-foco": "Mente no Alvo",
+        "desc_competicao": "Foco, garra e consistência em cada desafio.",
+        "desc_competicao-porto": "Onde a mente e o corpo são postos à prova.",
+        "desc_competicao-ispcsi": "Cada quilómetro conta na construção do resultado.",
+        "desc_treino-fatima": "Superar distâncias com foco e determinação.",
+        "desc_equipamento": "Identidade, disciplina e mentalidade competitiva.",
+        "desc_treino-foco": "Foco total. Nada tira do caminho."
     },
     en: {
         pageTitle: "Gallery | Lone Wolf", heroMini: "Rui Bastos", heroTitle: "Gallery",
@@ -142,13 +153,24 @@ window.pageTranslations = {
         fixedCtaPartners: "Partnerships",
         fixedCtaContact: "Contact",
         galeriaVazia: "No images in this category.",
-        tag_competicao: "Madrid Marathon", tag_competicao-porto: "Porto Marathon", tag_competicao-ispcsi: "ISPCSI Race",
-        tag_treino-fatima: "Run to Fátima", tag_equipamento: "Gear", tag_treino-foco: "Focus",
-        title_competicao: "Lone Wolf Spirit", title_competicao-porto: "Competition", title_competicao-ispcsi: "Race Pace",
-        title_treino-fatima: "Endurance", title_equipamento: "Lone Wolf", title_treino-foco: "Mind on Target",
-        desc_competicao: "Focus, grit and consistency in every challenge.", desc_competicao-porto: "Where mind and body are tested.",
-        desc_competicao-ispcsi: "Every kilometre counts towards the result.", desc_treino-fatima: "Overcoming distances with focus and determination.",
-        desc_equipamento: "Identity, discipline and competitive mindset.", desc_treino-foco: "Total focus. Nothing gets in the way."
+        "tag_competicao": "Madrid Marathon",
+        "tag_competicao-porto": "Porto Marathon",
+        "tag_competicao-ispcsi": "ISPCSI Race",
+        "tag_treino-fatima": "Run to Fátima",
+        "tag_equipamento": "Gear",
+        "tag_treino-foco": "Focus",
+        "title_competicao": "Lone Wolf Spirit",
+        "title_competicao-porto": "Competition",
+        "title_competicao-ispcsi": "Race Pace",
+        "title_treino-fatima": "Endurance",
+        "title_equipamento": "Lone Wolf",
+        "title_treino-foco": "Mind on Target",
+        "desc_competicao": "Focus, grit and consistency in every challenge.",
+        "desc_competicao-porto": "Where mind and body are tested.",
+        "desc_competicao-ispcsi": "Every kilometre counts towards the result.",
+        "desc_treino-fatima": "Overcoming distances with focus and determination.",
+        "desc_equipamento": "Identity, discipline and competitive mindset.",
+        "desc_treino-foco": "Total focus. Nothing gets in the way."
     }
 };
 </script>

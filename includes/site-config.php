@@ -1,10 +1,26 @@
 <?php
 
-return [
-    "site_url" => "http://localhost:8000",
+require_once __DIR__ . "/env.php";
+
+carregar_env(__DIR__ . "/../.env");
+
+$emailUser = env_var("EMAIL_USER", "lonewolf.runner.pt@gmail.com");
+$emailPass = strtolower(str_replace([" ", "-", "\r", "\n"], "", env_var("EMAIL_PASS")));
+
+$config = [
+    "site_url" => env_var("SITE_URL", "http://localhost:8000"),
     "site_name" => "Lone Wolf — Rui Bastos",
-    "contact_email" => "ruimbb@gmail.com",
-    "orders_email" => "ruimbb@gmail.com",
+
+    "contact_email" => $emailUser,
+    "orders_email" => $emailUser,
+
+    "smtp_host" => "smtp.gmail.com",
+    "smtp_port" => 587,
+    "smtp_user" => $emailUser,
+    "smtp_pass" => $emailPass,
+    "smtp_from_email" => $emailUser,
+    "smtp_from_name" => "LoneWolf Runner",
+
     "instagram_url" => "https://www.instagram.com/ruibastos.lonewolf/",
     "facebook_url" => "https://www.facebook.com/rui.bastos.39",
     "strava_url" => "https://www.strava.com/",
@@ -14,3 +30,14 @@ return [
     "bank_iban" => "PT50 0000 0000 0000 0000 0000 0",
     "bank_mbway" => "969758699",
 ];
+
+$local = __DIR__ . "/mail-config.local.php";
+if (file_exists($local)) {
+    $config = array_merge($config, require $local);
+}
+
+if ($config["smtp_from_email"] === "" && $config["smtp_user"] !== "") {
+    $config["smtp_from_email"] = $config["smtp_user"];
+}
+
+return $config;

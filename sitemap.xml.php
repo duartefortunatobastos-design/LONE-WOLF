@@ -5,7 +5,7 @@ $base = rtrim($config["site_url"], "/");
 
 $paginas = [
     "", "sobre.php", "historia.php", "provas.php", "rotina.php", "galeria.php",
-    "patrocinadores.php", "patrocinio.php", "media-kit.php", "faq.php", "loja.php", "contatos.php",
+    "patrocinadores.php", "faq.php", "loja.php", "contatos.php",
     "login.php", "registro.php", "politica-de-privacidade.php", "politica-de-cookies.php",
 ];
 

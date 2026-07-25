@@ -64,11 +64,11 @@ require_once "includes/head.php";
 
                 <details class="faq-item">
                     <summary data-i18n="partQ1">Como posso patrocinar o Rui Bastos?</summary>
-                    <p data-i18n="partA1">Consulta a página de Patrocínio para conhecer os pacotes Bronze, Silver e Gold, ou contacta directamente para uma proposta personalizada.</p>
+                    <p data-i18n="partA1">Contacta-nos directamente para conhecer opções de parceria e propostas personalizadas.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="partQ2">Fornecem media kit?</summary>
-                    <p data-i18n="partA2">Sim. A página Media Kit inclui bio, estatísticas e recursos oficiais para imprensa e parceiros.</p>
+                    <p data-i18n="partA2">Sim. Contacta-nos por e-mail ou WhatsApp e enviamos bio, estatísticas e recursos oficiais para imprensa e parceiros.</p>
                 </details>
                 <details class="faq-item">
                     <summary data-i18n="partQ3">Trabalham com marcas locais?</summary>
@@ -125,9 +125,9 @@ require_once "includes/head.php";
         shipA3: "Quando a encomenda for enviada, receberás actualização por e-mail. Também podes consultar o estado em «As Minhas Encomendas».",
         partnersTitle: "Parcerias",
         partQ1: "Como posso patrocinar o Rui Bastos?",
-        partA1: "Consulta a página de Patrocínio para conhecer os pacotes Bronze, Silver e Gold, ou contacta directamente para uma proposta personalizada.",
+        partA1: "Contacta-nos directamente para conhecer opções de parceria e propostas personalizadas.",
         partQ2: "Fornecem media kit?",
-        partA2: "Sim. A página Media Kit inclui bio, estatísticas e recursos oficiais para imprensa e parceiros.",
+        partA2: "Sim. Contacta-nos por e-mail ou WhatsApp e enviamos bio, estatísticas e recursos oficiais para imprensa e parceiros.",
         partQ3: "Trabalham com marcas locais?",
         partA3: "Sim. Valorizamos parcerias alinhadas com performance, saúde e lifestyle, tanto a nível local como nacional.",
         accountTitle: "Conta",
@@ -162,9 +162,9 @@ require_once "includes/head.php";
         shipA3: "When your order is shipped, you will receive an email update. You can also check status under «My Orders».",
         partnersTitle: "Partnerships",
         partQ1: "How can I sponsor Rui Bastos?",
-        partA1: "See the Sponsorship page for Bronze, Silver and Gold packages, or contact us directly for a tailored proposal.",
+        partA1: "Contact us directly to learn about partnership options and tailored proposals.",
         partQ2: "Do you provide a media kit?",
-        partA2: "Yes. The Media Kit page includes bio, statistics and official resources for press and partners.",
+        partA2: "Yes. Contact us by email or WhatsApp and we will share bio, statistics and official resources for press and partners.",
         partQ3: "Do you work with local brands?",
         partA3: "Yes. We value partnerships aligned with performance, health and lifestyle, locally and nationally.",
         accountTitle: "Account",

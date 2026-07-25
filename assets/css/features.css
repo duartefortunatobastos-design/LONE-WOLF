@@ -413,6 +413,10 @@ body.lw-enhanced.pagina-galeria .galeria-card,
     box-shadow: 0 0 8px rgba(229, 127, 31, 0.65);
 }
 
+.pagina-galeria .galeria-lightbox-trigger .tag.tag--sem-icone::before {
+    display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .pagina-galeria .hero-galeria::before,
     .pagina-galeria .hero-galeria .hero-conteudo.reveal-visible {

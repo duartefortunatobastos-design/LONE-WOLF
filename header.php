@@ -20,8 +20,6 @@ $navMoreLinks = [
     ["href" => "historia.php", "pt" => "História", "en" => "History", "match" => ["historia.php"]],
     ["href" => "rotina.php", "pt" => "Treinos", "en" => "Training", "match" => ["rotina.php"]],
     ["href" => "patrocinadores.php", "pt" => "Parceiros", "en" => "Partners", "match" => ["patrocinadores.php", "patrocinador1.php", "patrocinador2.php", "patrocinador3.php", "patrocinador4.php"]],
-    ["href" => "patrocinio.php", "pt" => "Patrocínio", "en" => "Sponsorship", "match" => ["patrocinio.php"]],
-    ["href" => "media-kit.php", "pt" => "Media Kit", "en" => "Media Kit", "match" => ["media-kit.php"]],
     ["href" => "faq.php", "pt" => "FAQ", "en" => "FAQ", "match" => ["faq.php"]],
 ];
 

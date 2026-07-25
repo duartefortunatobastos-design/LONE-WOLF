@@ -36,13 +36,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $hash_pass = password_hash($pass, PASSWORD_DEFAULT);
             $tipo = "user";
+            $token = gerar_token_verificacao();
+            $tokenExpira = date("Y-m-d H:i:s", time() + 86400);
 
-            $stmt = $conn->prepare("INSERT INTO utilizadores (nome, email, password, tipo) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $nome, $email, $hash_pass, $tipo);
+            $stmt = $conn->prepare("INSERT INTO utilizadores (nome, email, password, tipo, email_verificado, token_verificacao, token_expira) VALUES (?, ?, ?, ?, 0, ?, ?)");
+            $stmt->bind_param("ssssss", $nome, $email, $hash_pass, $tipo, $token, $tokenExpira);
 
             if ($stmt->execute()) {
                 $stmt->close();
-                header("Location: login.php?registro=sucesso");
+                $emailEnviado = email_confirmar_conta($nome, $email, $token);
+                $params = "registro=sucesso&email=" . urlencode($email);
+                if (!$emailEnviado) {
+                    $params .= "&email_erro=1";
+                }
+                header("Location: login.php?" . $params);
                 exit();
             }
 

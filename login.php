@@ -2,6 +2,7 @@
 require_once "includes/init.php";
 
 $erro = "";
+$emailPendente = "";
 
 if (isset($_SESSION["user_id"])) {
     if (!empty($_SESSION["redirect_after_login"])) {
@@ -33,6 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $erro = "Password incorreta";
     } elseif (!empty($user["bloqueado"])) {
         $erro = "A tua conta foi bloqueada. Contacta o administrador.";
+    } elseif (empty($user["email_verificado"])) {
+        $erro = "A tua conta ainda não foi confirmada. Consulta o teu email e clica no link de confirmação antes de fazer login.";
+        $emailPendente = $email;
     } else {
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["nome"] = $user["nome"];
@@ -63,8 +67,25 @@ require_once "includes/head.php";
 
 <section class="auth-shell">
     <div class="auth-card">
+        <?php if (!empty($_GET["registro"]) && $_GET["registro"] === "sucesso"): ?>
+            <div class="alerta sucesso" style="margin-bottom:18px;">
+                Conta criada com sucesso! Enviámos um email de confirmação para <strong><?= htmlspecialchars($_GET["email"] ?? "") ?></strong>. Para fazer login, consulta o seu email.
+            </div>
+            <?php if (!empty($_GET["email_erro"])): ?>
+                <p style="margin:-8px 0 18px;text-align:center;">
+                    Não recebeste o email?
+                    <a href="reenviar-confirmacao.php?email=<?= urlencode($_GET["email"] ?? "") ?>">Reenviar confirmação</a>
+                </p>
+            <?php endif; ?>
+        <?php endif; ?>
+
         <?php if ($erro !== ""): ?>
             <div class="alerta erro" style="margin-bottom:18px;"><?= htmlspecialchars($erro) ?></div>
+            <?php if (!empty($emailPendente)): ?>
+                <p style="margin:-8px 0 18px;text-align:center;">
+                    <a href="reenviar-confirmacao.php?email=<?= urlencode($emailPendente) ?>">Reenviar email de confirmação</a>
+                </p>
+            <?php endif; ?>
         <?php endif; ?>
 
         <form method="POST">

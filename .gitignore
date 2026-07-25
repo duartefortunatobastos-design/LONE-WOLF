@@ -1,5 +1,4 @@
-node_modules/
-.vscode/
-*.log
-.DS_Store
-Thumbs.db
+# Credenciais locais (nunca commitar)
+.env
+includes/mail-config.local.php
+logs/mail.log

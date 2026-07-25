@@ -136,6 +136,17 @@
     border-color: var(--lw-line);
 }
 
+.produto-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.produto-link:hover,
+.produto-link:focus {
+    text-decoration: none;
+}
+
 .produto-imagem {
     background: #ddd;
     aspect-ratio: 1 / 1;
@@ -200,6 +211,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     background: var(--lw-gradient-orange);
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: #101010;

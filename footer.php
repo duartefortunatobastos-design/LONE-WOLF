@@ -21,8 +21,6 @@
                         <a href="galeria.php" data-footer-i18n="gallery">Galeria</a>
                         <a href="patrocinadores.php" data-footer-i18n="partners">Parceiros</a>
                         <a href="loja.php" data-footer-i18n="shop">Loja</a>
-                        <a href="patrocinio.php" data-footer-i18n="sponsorship">Patrocínio</a>
-                        <a href="media-kit.php" data-footer-i18n="mediaKit">Media Kit</a>
                         <a href="faq.php" data-footer-i18n="faq">FAQ</a>
                         <a href="contatos.php" data-footer-i18n="contact">Contacto</a>
                     </div>

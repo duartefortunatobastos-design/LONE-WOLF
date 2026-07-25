@@ -23,6 +23,19 @@ function executar_migracoes(mysqli $conn): void
         $conn->query("ALTER TABLE utilizadores ADD COLUMN bloqueado TINYINT(1) NOT NULL DEFAULT 0");
     }
 
+    if (!coluna_existe($conn, "utilizadores", "email_verificado")) {
+        $conn->query("ALTER TABLE utilizadores ADD COLUMN email_verificado TINYINT(1) NOT NULL DEFAULT 0");
+        $conn->query("UPDATE utilizadores SET email_verificado = 1");
+    }
+
+    if (!coluna_existe($conn, "utilizadores", "token_verificacao")) {
+        $conn->query("ALTER TABLE utilizadores ADD COLUMN token_verificacao VARCHAR(64) NULL");
+    }
+
+    if (!coluna_existe($conn, "utilizadores", "token_expira")) {
+        $conn->query("ALTER TABLE utilizadores ADD COLUMN token_expira DATETIME NULL");
+    }
+
     if (!tabela_existe($conn, "conversas")) {
         $conn->query("
             CREATE TABLE conversas (

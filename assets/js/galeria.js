@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.dataset.desc = item.descricao;
 
         const tag = document.createElement("span");
-        tag.className = "tag";
+        tag.className = item.id === "competicao-porto" ? "tag tag--sem-icone" : "tag";
         tag.dataset.i18n = `tag_${item.id}`;
         tag.textContent = item.tag;
 
