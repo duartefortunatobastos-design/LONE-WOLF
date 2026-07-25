@@ -94,8 +94,7 @@ body.lw-enhanced .pagina-loja section,
 body.lw-enhanced .pagina-carrinho .conteudo-carrinho,
 body.lw-enhanced .pagina-checkout .conteudo-checkout,
 body.lw-enhanced .patrocinadores-page .section,
-body.lw-enhanced .parceiro-page .secao-branca,
-body.lw-enhanced .parceiro-page .secao-cinza {
+body.lw-enhanced .parceiro-page .parceiro-conteudo {
     padding-top: clamp(64px, 8vw, 96px);
     padding-bottom: clamp(72px, 9vw, 104px);
 }
@@ -488,31 +487,28 @@ body.lw-enhanced .patrocinadores-page .btn {
     box-shadow: 0 8px 22px rgba(229, 127, 31, 0.3);
 }
 
-body.lw-enhanced .parceiro-page .bloco-centro {
-    background: var(--lw-bg-card);
-    border: 1px solid var(--lw-border);
+body.lw-enhanced .parceiro-card {
     border-radius: var(--lw-radius-xl);
-    padding: clamp(32px, 4vw, 44px);
     box-shadow: var(--lw-shadow-card);
 }
 
-body.lw-enhanced .parceiro-page .secao-cinza .bloco-centro {
+body.lw-enhanced .parceiro-card--highlights {
     background: linear-gradient(135deg, #0a0c12, #151820);
     border-color: rgba(229, 127, 31, 0.18);
+}
+
+body.lw-enhanced .parceiro-card--highlights .parceiro-card-head h2,
+body.lw-enhanced .parceiro-card--highlights .parceiro-card-sub {
     color: #fff;
 }
 
-body.lw-enhanced .parceiro-page .secao-cinza h2,
-body.lw-enhanced .parceiro-page .secao-cinza .subtitulo {
-    color: #fff;
+body.lw-enhanced .parceiro-card--highlights .parceiro-destaque-card {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
-body.lw-enhanced .parceiro-page .lista-destaques li {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin-bottom: 10px;
+body.lw-enhanced .parceiro-card--highlights .parceiro-destaque-card p {
+    color: rgba(255, 255, 255, 0.88);
 }
 
 /* ── Loja ── */

@@ -1,6 +1,8 @@
 <?php
 require_once "includes/init.php";
 
+bloquear_loja_se_inactiva();
+
 if (!isset($_SESSION["carrinho"])) {
     $_SESSION["carrinho"] = [];
 }

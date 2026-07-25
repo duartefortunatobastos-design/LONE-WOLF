@@ -310,7 +310,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "hidden";
         buildThumbs();
         show(currentIndex);
-        updateFixedCta();
     };
 
     const close = () => {
@@ -320,7 +319,6 @@ document.addEventListener("DOMContentLoaded", () => {
         img.src = "";
         img.classList.remove("is-fading");
         document.body.style.overflow = "";
-        updateFixedCta();
     };
 
     const prev = () => show(currentIndex - 1);
@@ -427,40 +425,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    const fixedCta = document.getElementById("galeria-fixed-cta");
-    let updateFixedCta = () => {};
-
-    const initFixedCta = () => {
-        if (!fixedCta) return;
-
-        const galleryPage = document.getElementById("galeria-inicio");
-        const galleryEnd = document.getElementById("galeria-fim");
-        if (!galleryPage) return;
-
-        let ticking = false;
-
-        updateFixedCta = () => {
-            const lightboxOpen = lightbox && !lightbox.hidden;
-            const pageTop = galleryPage.getBoundingClientRect().top;
-            const endBottom = galleryEnd?.getBoundingClientRect().bottom ?? Infinity;
-            const pastHero = pageTop < window.innerHeight * 0.55;
-            const beforeFooter = endBottom > window.innerHeight + 40;
-            const shouldShow = pastHero && beforeFooter && !lightboxOpen;
-
-            fixedCta.hidden = !shouldShow;
-            fixedCta.classList.toggle("is-visible", shouldShow);
-            ticking = false;
-        };
-
-        window.addEventListener("scroll", () => {
-            if (ticking) return;
-            ticking = true;
-            requestAnimationFrame(updateFixedCta);
-        }, { passive: true });
-
-        updateFixedCta();
-    };
-
     // —— Render & filtros ——
     const renderGallery = (categoria, animate = true, scrollToContent = false) => {
         if (isAnimating) return;
@@ -512,7 +476,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initSmoothScroll();
     initHeroParallax();
-    initFixedCta();
 
     if (mount.querySelector(".galeria-lightbox-trigger")) {
         applyTranslations();

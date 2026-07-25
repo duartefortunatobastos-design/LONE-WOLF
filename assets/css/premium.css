@@ -448,8 +448,7 @@ body.auth-page {
 }
 
 /* —— Sponsors —— */
-.parceiro-page .bloco-centro,
-.lista-destaques li {
+.parceiro-destaque-card {
     background: var(--lw-bg-card);
     border: 1px solid var(--lw-border);
     border-radius: var(--lw-radius-lg);

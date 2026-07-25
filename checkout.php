@@ -1,6 +1,8 @@
 <?php
 require_once "includes/init.php";
 
+bloquear_loja_se_inactiva();
+
 if (empty($_SESSION["carrinho"])) {
     header("Location: carrinho.php");
     exit;

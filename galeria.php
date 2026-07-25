@@ -68,16 +68,6 @@ require_once "includes/head.php";
     </div>
 </section>
 
-<aside class="galeria-fixed-cta" id="galeria-fixed-cta" hidden aria-label="Acções da galeria">
-    <div class="galeria-fixed-cta-inner">
-        <p class="galeria-fixed-cta-text" data-i18n="fixedCtaText">Interessado em parcerias ou colaboração?</p>
-        <div class="galeria-fixed-cta-actions">
-            <a href="patrocinadores.php" class="galeria-fixed-cta-btn galeria-fixed-cta-btn--ghost" data-i18n="fixedCtaPartners">Parcerias</a>
-            <a href="contatos.php" class="galeria-fixed-cta-btn" data-i18n="fixedCtaContact">Contacto</a>
-        </div>
-    </div>
-</aside>
-
 <div class="galeria-lightbox" id="galeria-lightbox" hidden role="dialog" aria-modal="true" aria-label="Visualizador de galeria">
     <button type="button" class="galeria-lightbox-close" aria-label="Fechar">&times;</button>
     <button type="button" class="galeria-lightbox-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
@@ -115,9 +105,6 @@ window.pageTranslations = {
         viewPhoto: "Ver",
         cardCta: "Contactar",
         cardCta_equipamento: "Ver loja",
-        fixedCtaText: "Interessado em parcerias ou colaboração?",
-        fixedCtaPartners: "Parcerias",
-        fixedCtaContact: "Contacto",
         galeriaVazia: "Nenhuma imagem nesta categoria.",
         "tag_competicao": "Maratona Madrid",
         "tag_competicao-porto": "Maratona Porto",
@@ -149,9 +136,6 @@ window.pageTranslations = {
         viewPhoto: "View",
         cardCta: "Contact",
         cardCta_equipamento: "Shop",
-        fixedCtaText: "Interested in partnerships or collaboration?",
-        fixedCtaPartners: "Partnerships",
-        fixedCtaContact: "Contact",
         galeriaVazia: "No images in this category.",
         "tag_competicao": "Madrid Marathon",
         "tag_competicao-porto": "Porto Marathon",

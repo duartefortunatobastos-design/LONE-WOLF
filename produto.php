@@ -1,6 +1,8 @@
 <?php
 require_once "includes/init.php";
 
+bloquear_loja_se_inactiva();
+
 $id = isset($_GET["id"]) ? (int) $_GET["id"] : 0;
 $produto = $id > 0 ? obter_produto($conn, $id) : null;
 

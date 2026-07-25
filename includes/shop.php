@@ -1,5 +1,25 @@
 <?php
 
+function loja_esta_ativa(): bool
+{
+    static $activa = null;
+
+    if ($activa === null) {
+        $config = require __DIR__ . "/site-config.php";
+        $activa = !empty($config["loja_ativa"]);
+    }
+
+    return $activa;
+}
+
+function bloquear_loja_se_inactiva(): void
+{
+    if (!loja_esta_ativa()) {
+        header("Location: loja.php");
+        exit;
+    }
+}
+
 function obter_produtos(mysqli $conn, bool $apenasActivos = true): array
 {
     $sql = "SELECT * FROM produtos";

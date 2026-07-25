@@ -29,6 +29,9 @@ $config = [
     "analytics_id" => "",
     "bank_iban" => "PT50 0000 0000 0000 0000 0000 0",
     "bank_mbway" => "969758699",
+
+    // Loja: false = mostra "Novidades em Breve"; true = loja completa
+    "loja_ativa" => filter_var(env_var("LOJA_ATIVA", "0"), FILTER_VALIDATE_BOOLEAN),
 ];
 
 $local = __DIR__ . "/mail-config.local.php";
