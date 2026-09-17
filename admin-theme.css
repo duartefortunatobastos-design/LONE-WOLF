@@ -1,0 +1,359 @@
+/* Painel admin — mesmo visual das outras páginas */
+
+html:has(body.admin-panel-page),
+body.admin-panel-page {
+    background: var(--color-bg-primary) !important;
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page .admin-main,
+body.admin-panel-page .site-footer {
+    background: var(--color-bg-primary);
+}
+
+body.admin-panel-page .ds-section.admin-page,
+body.admin-panel-page .admin-page,
+body.admin-panel-page .admin-container {
+    background: transparent !important;
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page .admin-page.ds-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+}
+
+body.admin-panel-page .alerta.sucesso {
+    background: rgba(31, 122, 63, 0.16);
+    border: 1px solid rgba(31, 122, 63, 0.4);
+    color: #d4f0dc;
+}
+
+body.admin-panel-page .alerta.erro {
+    background: rgba(180, 40, 40, 0.16);
+    border: 1px solid rgba(180, 40, 40, 0.4);
+    color: #f5c6c6;
+}
+
+body.admin-panel-page .admin-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 0 0 32px;
+    padding: 10px;
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 22px;
+    box-shadow: none;
+}
+
+body.admin-panel-page .admin-nav-link {
+    min-height: 44px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent !important;
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+body.admin-panel-page .admin-nav-link i {
+    color: inherit;
+}
+
+body.admin-panel-page .admin-nav-link:hover,
+body.admin-panel-page .admin-nav-link.ativa {
+    background: rgba(229, 127, 31, 0.14) !important;
+    border-color: transparent;
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .admin-nav-link em {
+    background: rgba(229, 127, 31, 0.14);
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .admin-nav-link.ativa em {
+    background: var(--color-accent);
+    color: var(--color-bg-primary);
+}
+
+body.admin-panel-page .painel-contas,
+body.admin-panel-page .painel-mensagens,
+body.admin-panel-page .painel-utilizadores,
+body.admin-panel-page .stat-card {
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border) !important;
+    box-shadow: none;
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page a.admin-quick-card,
+body.admin-panel-page .admin-quick-card {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border: 1px solid #26262a !important;
+    box-shadow: none !important;
+    color: #f5f5f4 !important;
+}
+
+body.admin-panel-page .admin-stats-grande .stat-card {
+    background: var(--color-bg-secondary) !important;
+}
+
+body.admin-panel-page .stat-label {
+    color: var(--color-text-secondary);
+}
+
+body.admin-panel-page .stat-value,
+body.admin-panel-page .admin-quick-meta {
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .admin-quick-card strong {
+    color: #ffffff !important;
+}
+
+body.admin-panel-page .admin-quick-card p {
+    color: #c4c4c6 !important;
+}
+
+body.admin-panel-page .admin-quick-icon {
+    background: rgba(229, 127, 31, 0.14);
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .admin-painel-header {
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+}
+
+body.admin-panel-page .admin-painel-heading h2,
+body.admin-panel-page .painel-topo h2 {
+    font-family: var(--font-display);
+    color: var(--color-text-primary) !important;
+    letter-spacing: var(--tracking-display);
+}
+
+body.admin-panel-page .painel-subtitulo,
+body.admin-panel-page .utilizador-email,
+body.admin-panel-page .admin-conversa-preview,
+body.admin-panel-page .admin-conta-sem-acao,
+body.admin-panel-page .admin-conta-info .conta-id {
+    color: var(--color-text-secondary) !important;
+}
+
+body.admin-panel-page .resumo-chip {
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+body.admin-panel-page .resumo-chip strong {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+}
+
+body.admin-panel-page .admin-conta-card {
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    box-shadow: none;
+}
+
+body.admin-panel-page .admin-conta-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+body.admin-panel-page .admin-conta-card.conta-bloqueada {
+    background: var(--color-bg-secondary) !important;
+    border-color: rgba(180, 40, 40, 0.45);
+}
+
+body.admin-panel-page .utilizador-nome,
+body.admin-panel-page .admin-conta-info .utilizador-nome {
+    color: var(--color-text-primary) !important;
+}
+
+body.admin-panel-page .conta-avatar {
+    background: var(--color-accent);
+    color: var(--color-bg-primary);
+    box-shadow: none;
+}
+
+body.admin-panel-page .tipo-conta.user {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+body.admin-panel-page .tipo-conta.admin {
+    background: rgba(229, 127, 31, 0.14);
+    border: 1px solid rgba(229, 127, 31, 0.4);
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .tipo-conta.blocked {
+    background: rgba(180, 40, 40, 0.16);
+    border: 1px solid rgba(180, 40, 40, 0.4);
+    color: #f5c6c6;
+}
+
+body.admin-panel-page .sem-mensagens {
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+body.admin-panel-page .admin-menu-btn,
+body.admin-panel-page .admin-menu {
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page .admin-menu-btn:hover,
+body.admin-panel-page .admin-menu-btn[aria-expanded="true"] {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .admin-menu-item {
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page .admin-menu-item:hover {
+    background: rgba(229, 127, 31, 0.12);
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .admin-menu-item.danger,
+body.admin-panel-page .admin-menu-item.danger i {
+    color: #f5c6c6;
+}
+
+body.admin-panel-page input:not([type="checkbox"]):not([type="hidden"]):not([type="radio"]),
+body.admin-panel-page select,
+body.admin-panel-page textarea {
+    background: var(--color-bg-primary) !important;
+    color: var(--color-text-primary) !important;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-btn);
+    caret-color: var(--color-accent);
+}
+
+body.admin-panel-page select option {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page .admin-produto-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 14px;
+}
+
+body.admin-panel-page .admin-produto-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 140px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+}
+
+body.admin-panel-page .admin-checkbox-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+body.admin-panel-page .admin-produto-form input[type="text"],
+body.admin-panel-page .admin-form-inline select {
+    min-height: 42px;
+    padding: 0 12px;
+    font-family: var(--font-body);
+    font-size: 14px;
+}
+
+body.admin-panel-page .admin-form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+body.admin-panel-page .ds-btn {
+    min-height: 42px;
+    min-width: 0;
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+body.admin-panel-page .btn-action.guardar,
+body.admin-panel-page .ds-btn-primary {
+    background: var(--color-accent) !important;
+    color: var(--color-text-primary) !important;
+    border: 0;
+    box-shadow: none;
+}
+
+body.admin-panel-page .btn-action.guardar:hover,
+body.admin-panel-page .ds-btn-primary:hover {
+    background: var(--color-accent-hover) !important;
+    color: var(--color-text-primary) !important;
+    filter: none;
+}
+
+body.admin-panel-page .estado-pendente {
+    background: rgba(229, 127, 31, 0.16);
+    color: var(--color-accent);
+}
+
+body.admin-panel-page .estado-pago {
+    background: rgba(31, 122, 63, 0.18);
+    color: #8fd4a4;
+}
+
+body.admin-panel-page .estado-enviado {
+    background: rgba(229, 127, 31, 0.1);
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page .estado-concluido {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-text-primary);
+}
+
+body.admin-panel-page .estado-cancelado {
+    background: rgba(180, 40, 40, 0.18);
+    color: #f5c6c6;
+}
+
+body.admin-panel-page .admin-produto-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    background: #000;
+}

@@ -1,0 +1,8 @@
+# Credenciais locais (nunca commitar)
+.env
+.env.*
+includes/mail-config.local.php
+logs/mail.log
+node_modules/
+.DS_Store
+Thumbs.db

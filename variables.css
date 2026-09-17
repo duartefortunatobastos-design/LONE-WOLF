@@ -1,0 +1,66 @@
+:root {
+    --lw-bg: #0a0a0b;
+    --lw-bg-soft: #151517;
+    --lw-bg-card: #ffffff;
+    --lw-dark: #06080c;
+    --lw-dark-soft: #0a0c12;
+    --lw-banner: linear-gradient(135deg, #06080c 0%, #0c1520 52%, #111820 100%);
+    --lw-text: #f5f5f4;
+    --lw-muted: #9a9a9d;
+    --lw-line: #e57f1f;
+    --lw-line-strong: #ff9a1f;
+    --lw-line-hover: #cf7712;
+    --lw-border: rgba(16, 19, 24, 0.1);
+    --lw-border-strong: rgba(16, 19, 24, 0.14);
+    --lw-white: #ffffff;
+    --lw-danger: #c70000;
+    --lw-success: #1f7a3f;
+    --lw-header-height: 80px;
+    --lw-radius: 12px;
+    --lw-radius-lg: 18px;
+    --lw-radius-xl: 22px;
+    --lw-shadow: 0 18px 44px rgba(6, 8, 12, 0.08);
+    --lw-shadow-soft: 0 10px 28px rgba(6, 8, 12, 0.06);
+    --lw-shadow-card: 0 16px 40px rgba(6, 8, 12, 0.07);
+    --lw-shadow-hover: 0 22px 48px rgba(6, 8, 12, 0.12);
+    --lw-shadow-dark: 0 24px 60px rgba(0, 0, 0, 0.35);
+    --lw-transition: 0.25s ease;
+    --lw-container: 1200px;
+    --lw-section-y: clamp(72px, 9vw, 110px);
+    --lw-hero-min-h: 420px;
+    --lw-hero-h: 420px;
+    --lw-inner-bg: #eef1f6;
+    --lw-inner-dark: #080a10;
+    --lw-inner-card: #ffffff;
+    --lw-glow-orange: rgba(229, 127, 31, 0.45);
+    --lw-font-display: "Oswald", Impact, sans-serif;
+    --lw-font-body: "Outfit", system-ui, sans-serif;
+    --lw-gradient-orange: linear-gradient(135deg, #ffb357 0%, #e57f1f 100%);
+    --lw-gradient-dark: linear-gradient(180deg, #0b0d12 0%, #06080c 100%);
+    --lw-glass-light: rgba(255, 255, 255, 0.82);
+    --lw-glass-dark: rgba(255, 255, 255, 0.05);
+    --lw-text-on-dark: rgba(255, 255, 255, 0.94);
+    --lw-muted-on-dark: rgba(255, 255, 255, 0.58);
+
+    /* —— Design system Lone Wolf (redesign) —— */
+    --color-bg-primary: #0a0a0b;
+    --color-bg-secondary: #151517;
+    --color-accent: #e57f1f;
+    --color-accent-hover: #ff9a1f;
+    --color-text-primary: #f5f5f4;
+    --color-text-secondary: #9a9a9d;
+    --color-border: #26262a;
+    --color-gold: #ff9a1f;
+
+    --font-display: "Oswald", Impact, sans-serif;
+    --font-body: "Outfit", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    --container-max: 1280px;
+    --section-y: 120px;
+    --section-y-mobile: 64px;
+    --radius-btn: 4px;
+    --tracking-display: 0.04em;
+    --transition-fast: 200ms ease;
+    --grid-gap: 24px;
+}

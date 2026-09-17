@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin_mensagens.php
+Disallow: /admin_encomendas.php
+Disallow: /admin_produtos.php
+Disallow: /responder_mensagem.php
+Disallow: /login_admin.php
+Disallow: /includes/
+Disallow: /scripts/
+
+Sitemap: https://lonewolfpt.com/sitemap.xml

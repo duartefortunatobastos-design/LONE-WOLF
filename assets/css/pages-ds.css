@@ -1,0 +1,903 @@
+/* História editorial + Competições + Galeria + Loja */
+
+.story-column {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.story-lead {
+    font-size: 22px;
+    color: var(--color-text-primary) !important;
+}
+
+.story-article .ds-text {
+    margin: 0 0 22px;
+    font-size: 18px;
+    color: var(--color-text-primary);
+}
+
+.story-quote {
+    max-width: 860px;
+    margin: 48px auto;
+    padding: 0 24px;
+    border: 0;
+}
+
+.story-quote p {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: var(--tracking-display);
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.story-figure {
+    max-width: 980px;
+    margin: 48px auto;
+}
+
+.story-figure img {
+    width: 100%;
+    max-height: 560px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+}
+
+.races-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.races-filter {
+    min-height: 40px;
+    padding: 8px 16px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.races-filter.is-active,
+.races-filter:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.races-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.race-card {
+    overflow: hidden;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.race-card.is-hidden {
+    display: none;
+}
+
+.race-card-media {
+    height: 180px;
+    overflow: hidden;
+}
+
+.race-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.race-card-media--logo {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background: #000;
+}
+
+.race-card-media--logo img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.race-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px 20px 24px;
+}
+
+.race-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+}
+
+.race-card-name {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--color-text-primary);
+}
+
+.race-card-time {
+    margin: 0;
+    font-size: 28px;
+}
+
+.race-card-rank {
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+}
+
+.gallery-page,
+.shop-page {
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+}
+
+.gallery-page .secao-titulo h2,
+.gallery-page .secao-titulo h3,
+.gallery-page .frase-final h2 {
+    color: #f5f5f4;
+}
+
+.gallery-page .secao-titulo p,
+.gallery-page .frase-final p {
+    color: #c8c8c8;
+}
+
+.gallery-page .page-section,
+.shop-page .ds-section {
+    background: var(--color-bg-primary);
+}
+
+.gallery-toolbar .filtro-btn {
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+}
+
+.gallery-toolbar .filtro-btn.activo,
+.gallery-page .filtro-btn.activo {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: transparent;
+}
+
+.shop-soon {
+    min-height: 42vh;
+    display: flex;
+    align-items: center;
+}
+
+.shop-soon-card {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 72px) 32px;
+    text-align: center;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+}
+
+.shop-soon-kicker {
+    margin: 0 0 16px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.shop-soon .ds-title {
+    margin: 0 0 16px;
+    font-size: clamp(42px, 7vw, 72px);
+}
+
+.shop-soon .ds-text {
+    margin: 0 auto 28px;
+    max-width: 42ch;
+}
+
+.shop-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.shop-product-card {
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+}
+
+.shop-product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.shop-product-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.shop-product-body h3 {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--color-text-primary);
+}
+
+.shop-product-price {
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+}
+
+.train-philosophy {
+    max-width: 720px;
+    text-align: center;
+}
+
+.train-philosophy .ds-title {
+    margin-bottom: 16px;
+    font-size: clamp(40px, 6vw, 64px);
+}
+
+.train-volume {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.train-volume-value {
+    font-size: clamp(48px, 8vw, 72px);
+}
+
+.train-types {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.train-type-card {
+    padding: 24px 18px;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.train-type-card i {
+    margin-bottom: 12px;
+    color: var(--color-accent);
+    font-size: 20px;
+}
+
+.train-type-card h3 {
+    margin: 0 0 8px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text-primary);
+}
+
+.train-week {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.train-week-head {
+    margin-top: 72px;
+}
+
+.home-block-head .ds-btn {
+    margin-top: 20px;
+}
+
+.train-cell {
+    display: flex;
+    min-height: 160px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 12px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.train-cell--rest {
+    opacity: 0.72;
+}
+
+.train-cell--long,
+.train-cell--race {
+    border-color: var(--color-accent);
+}
+
+.train-cell--race {
+    background: rgba(229, 127, 31, 0.12);
+}
+
+.train-day {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+}
+
+.train-kind {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-primary);
+}
+
+.train-num {
+    margin-top: auto;
+    font-size: 18px;
+}
+
+.train-note {
+    max-width: 680px;
+    text-align: center;
+}
+
+.train-note .ds-title {
+    margin-bottom: 16px;
+}
+
+.train-note .ds-btn {
+    margin-top: 24px;
+}
+
+.gallery-page .galeria-mosaico {
+    display: block;
+    column-count: 3;
+    column-gap: 16px;
+}
+
+.gallery-page .galeria-card,
+.gallery-page .foto-card,
+.gallery-page .foto-destaque {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .train-types,
+    .train-week {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .races-grid,
+    .shop-products-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .gallery-page .galeria-mosaico {
+        column-count: 1;
+    }
+
+    .train-types,
+    .train-week {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+.contacto-page-main,
+.contacto-page-main .page-section.secao-contactos,
+body.lw-enhanced .contacto-page-main .secao-contactos {
+    background: var(--color-bg-primary);
+}
+
+.contacto-page-main .bloco-titulo h2,
+body.lw-enhanced .contacto-page-main .bloco-titulo h2 {
+    color: var(--color-text-primary);
+}
+
+.contacto-page-main .bloco-titulo p,
+body.lw-enhanced .contacto-page-main .bloco-titulo p {
+    color: var(--color-text-secondary);
+}
+
+.contacto-page-main .info-bloco,
+body.lw-enhanced .contacto-page-main .info-bloco {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+}
+
+.contacto-page-main .info-bloco:hover,
+body.lw-enhanced .contacto-page-main .info-bloco:hover {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-accent);
+    box-shadow: none;
+}
+
+.contacto-page-main .info-bloco h3,
+body.lw-enhanced .contacto-page-main .info-bloco h3 {
+    color: var(--color-text-primary);
+}
+
+.contacto-page-main .info-bloco a {
+    color: var(--color-accent);
+}
+
+.faq-page,
+.faq-page .page-section.faq-section,
+body.lw-enhanced .faq-page .faq-section {
+    background: var(--color-bg-primary);
+}
+
+.faq-page .faq-grupo h2 {
+    color: var(--color-text-primary);
+}
+
+.faq-page .faq-item,
+body.lw-enhanced .faq-page .faq-item {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+}
+
+.faq-page .faq-item[open] {
+    border-color: var(--color-accent);
+    box-shadow: none;
+}
+
+.faq-page .faq-item summary {
+    color: var(--color-text-primary);
+}
+
+.faq-page .faq-item p {
+    color: var(--color-text-secondary);
+}
+
+.faq-page .cta-box,
+body.lw-enhanced .faq-page .cta-box {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+}
+
+.faq-page .cta-box h2,
+body.lw-enhanced .faq-page .cta-box h2 {
+    color: var(--color-text-primary);
+}
+
+.faq-page .cta-box p,
+body.lw-enhanced .faq-page .cta-box p {
+    color: var(--color-text-secondary);
+}
+
+.patrocinadores-page,
+.patrocinadores-page .section,
+body.lw-enhanced .patrocinadores-page .section,
+.parceiro-page,
+.parceiro-page .secao-branca,
+.parceiro-page .secao-cinza,
+.parceiro-page .secao-final,
+body.lw-enhanced .parceiro-page .secao-branca,
+body.lw-enhanced .parceiro-page .secao-cinza {
+    background: var(--color-bg-primary);
+}
+
+.patrocinadores-page .title h2,
+.parceiro-page .bloco-centro h2 {
+    color: var(--color-text-primary);
+}
+
+.patrocinadores-page .title p,
+.parceiro-page .subtitulo,
+.parceiro-page .texto-info,
+.parceiro-page .texto-info p {
+    color: var(--color-text-secondary);
+}
+
+.patrocinadores-page .card,
+body.lw-enhanced .patrocinadores-page .card,
+.parceiro-page .bloco-centro,
+body.lw-enhanced .parceiro-page .bloco-centro,
+body.lw-enhanced .parceiro-page .secao-cinza .bloco-centro {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+    color: var(--color-text-primary);
+}
+
+.patrocinadores-page .card:hover,
+body.lw-enhanced .patrocinadores-page .card:hover {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-accent);
+    box-shadow: none;
+}
+
+.patrocinadores-page .card h3 {
+    color: var(--color-text-primary);
+}
+
+.patrocinadores-page .card p {
+    color: var(--color-text-secondary);
+}
+
+.patrocinadores-page .card-bg {
+    opacity: 0.42;
+}
+
+.parceiro-page .secao-branca,
+.parceiro-page .secao-cinza {
+    padding: 72px 24px;
+}
+
+.parceiro-panel-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.parceiro-panel-head {
+    margin: 0 0 32px;
+    padding: 0 0 20px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+}
+
+.parceiro-panel-head h2,
+.parceiro-page .parceiro-panel-head h2 {
+    margin: 0 0 8px;
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 52px);
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+    color: var(--color-text-primary);
+}
+
+.parceiro-panel-head .subtitulo {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+.parceiro-page .parceiro-panel-head .linha {
+    width: 40px;
+    height: 3px;
+    margin: 16px 0 0;
+    border-radius: 0;
+}
+
+.parceiro-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 48px;
+}
+
+.parceiro-about-grid p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.parceiro-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.parceiro-highlights li {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 148px;
+    padding: 24px 22px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-accent);
+}
+
+.parceiro-highlight-index {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--color-accent);
+}
+
+.parceiro-highlights p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--color-text-primary);
+}
+
+.parceiro-page .secao-cinza,
+.parceiro-page .secao-cinza .parceiro-panel-inner,
+.parceiro-page .secao-cinza .parceiro-highlights,
+.parceiro-page .secao-cinza .parceiro-highlights li {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+@media (max-width: 800px) {
+    .parceiro-about-grid,
+    .parceiro-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .parceiro-highlights li {
+        min-height: 0;
+    }
+}
+
+.parceiro-page .botao-final {
+    background: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+}
+
+.parceiro-hero .footer-social-wrap a {
+    background: #0a0a0b !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: none;
+}
+
+.parceiro-hero .footer-social-wrap a:hover {
+    background: #0a0a0b !important;
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    box-shadow: none;
+}
+
+.historia-page-main {
+    background: var(--color-bg-primary);
+}
+
+.historia-page-main .page-section.historia-page {
+    background: var(--color-bg-primary);
+}
+
+.historia-page-main .historia-intro .intro-historia {
+    margin-bottom: 0;
+}
+
+body.lw-enhanced .historia-page-main .intro-historia {
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+}
+
+.historia-page-main .intro-historia .intro-texto h2,
+body.lw-enhanced .historia-page-main .intro-historia .intro-texto h2 {
+    color: var(--color-text-primary);
+}
+
+.historia-page-main .intro-historia .intro-texto p,
+body.lw-enhanced .historia-page-main .intro-historia .intro-texto p {
+    color: var(--color-text-secondary);
+    max-width: none;
+}
+
+/* Banners — mesma caixa em todas as páginas, logo visível */
+.hero-page,
+.hero-admin,
+.hero-contacto,
+.hero-legal,
+.hero-atleta,
+.hero-historia,
+.hero-galeria,
+.hero-rotina,
+.hero-loja,
+.provas-hero,
+.patrocinadores-page .hero,
+.hero-carrinho,
+.hero-checkout,
+.parceiro-hero,
+.auth-hero,
+body.lw-enhanced .hero-page,
+body.lw-enhanced .hero-admin,
+body.lw-enhanced .hero-contacto,
+body.lw-enhanced .hero-legal,
+body.lw-enhanced .hero-atleta,
+body.lw-enhanced .hero-historia,
+body.lw-enhanced .hero-galeria,
+body.lw-enhanced .hero-rotina,
+body.lw-enhanced .hero-loja,
+body.lw-enhanced .provas-hero,
+body.lw-enhanced .patrocinadores-page .hero,
+body.lw-enhanced .hero-carrinho,
+body.lw-enhanced .hero-checkout,
+body.lw-enhanced.auth-page .auth-hero {
+    width: 100%;
+    height: var(--lw-hero-h);
+    min-height: var(--lw-hero-h);
+    max-height: var(--lw-hero-h);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    background: var(--lw-banner);
+    overflow: hidden;
+}
+
+.hero-page::before,
+.hero-admin::before,
+.hero-contacto::before,
+.hero-legal::before,
+.hero-atleta::before,
+.hero-historia::before,
+.hero-galeria::before,
+.hero-rotina::before,
+.hero-loja::before,
+.provas-hero::before,
+.patrocinadores-page .hero::before,
+.hero-carrinho::before,
+.hero-checkout::before,
+.auth-hero::before,
+.parceiro-hero::before,
+body.lw-enhanced .hero-page::before,
+body.lw-enhanced .hero-admin::before,
+body.lw-enhanced .hero-contacto::before,
+body.lw-enhanced .hero-legal::before,
+body.lw-enhanced .hero-atleta::before,
+body.lw-enhanced .hero-historia::before,
+body.lw-enhanced .hero-galeria::before,
+body.lw-enhanced .hero-rotina::before,
+body.lw-enhanced .hero-loja::before,
+body.lw-enhanced .provas-hero::before,
+body.lw-enhanced .patrocinadores-page .hero::before,
+body.lw-enhanced .hero-carrinho::before,
+body.lw-enhanced .hero-checkout::before,
+body.lw-enhanced.auth-page .auth-hero::before,
+body.lw-enhanced .parceiro-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../IMAGENS/logo_lobo.png") no-repeat;
+    background-position: right 4% center;
+    background-size: min(540px, 46vw);
+    opacity: 0.62;
+    filter: none;
+    z-index: 0;
+}
+
+.hero-page::after,
+.hero-admin::after,
+.hero-contacto::after,
+.hero-legal::after,
+.hero-atleta::after,
+.hero-historia::after,
+.hero-galeria::after,
+.hero-rotina::after,
+.hero-loja::after,
+.provas-hero::after,
+.patrocinadores-page .hero::after,
+.hero-carrinho::after,
+.hero-checkout::after,
+.auth-hero::after,
+.parceiro-hero::after,
+body.lw-enhanced .hero-page::after,
+body.lw-enhanced .hero-admin::after,
+body.lw-enhanced .hero-contacto::after,
+body.lw-enhanced .hero-legal::after,
+body.lw-enhanced .hero-atleta::after,
+body.lw-enhanced .hero-historia::after,
+body.lw-enhanced .hero-galeria::after,
+body.lw-enhanced .hero-rotina::after,
+body.lw-enhanced .hero-loja::after,
+body.lw-enhanced .provas-hero::after,
+body.lw-enhanced .patrocinadores-page .hero::after,
+body.lw-enhanced .hero-carrinho::after,
+body.lw-enhanced .hero-checkout::after,
+body.lw-enhanced.auth-page .auth-hero::after,
+body.lw-enhanced .parceiro-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 88% 48%, rgba(229, 127, 31, 0.1), transparent 30%),
+        linear-gradient(90deg, rgba(6, 8, 12, 0.92) 0%, rgba(8, 14, 22, 0.62) 32%, rgba(8, 14, 22, 0.12) 60%, transparent 82%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-conteudo,
+.parceiro-hero .hero-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 700px) {
+    :root {
+        --lw-hero-h: 300px;
+        --lw-hero-min-h: 300px;
+    }
+
+    .hero-page::before,
+    .hero-admin::before,
+    .hero-contacto::before,
+    .hero-legal::before,
+    .hero-atleta::before,
+    .hero-historia::before,
+    .hero-galeria::before,
+    .hero-rotina::before,
+    .hero-loja::before,
+    .provas-hero::before,
+    .patrocinadores-page .hero::before,
+    .hero-carrinho::before,
+    .hero-checkout::before,
+    .auth-hero::before,
+    .parceiro-hero::before {
+        background-size: min(280px, 70vw);
+        background-position: right -8% center;
+        opacity: 0.45;
+    }
+}
+
+.hero-home {
+    justify-content: center;
+}
+
+.hero-home .hero-conteudo,
+.hero-home .hero-conteudo.reveal-page,
+.hero-home .hero-conteudo.reveal-visible {
+    max-width: 900px;
+    width: auto;
+    margin: 0 0 0 clamp(28px, 5vw, 72px);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .hero-home .hero-conteudo,
+    .hero-home .hero-conteudo.reveal-page,
+    .hero-home .hero-conteudo.reveal-visible {
+        margin-left: 16px;
+    }
+}
+
+html,
+body,
+main,
+.train-page,
+.ds-section,
+.hero-rotina,
+.hero-loja,
+.hero-home,
+.hero-page,
+.site-footer,
+.lw-header {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+body.lw-enhanced:not(.auth-page) {
+    background: #0a0a0b !important;
+}
